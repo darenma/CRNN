@@ -32,8 +32,8 @@ To be specific, we do the following steps to make the data fit our needs.
 1. We union the buys and clicks datasets together and sort them by session_id and Timestamp in chronological order. 
 
 1. For each session, we make a rolling window of 20 events and treated the last event in the window as our target. The minimum number of events of the window should be 2 (i.e. at least one event before our target event). We add paddings for those windows having fewer than 20 events to unify the length of our dataset.
-
-![This figure](https://github.com/darenma/CRNN/blob/master/images/dfhead.png) shows the head 5 rows of our dataset after step 2. Note that the index is the time index of these events, and padding rows of values -1 are added. 
+![This figure](https://github.com/darenma/CRNN/blob/master/images/df.png)
+This figure shows the head 5 rows of our dataset after step 2. Note that the index is the time index of these events, and padding rows of values -1 are added. 
 
 1. We extract each 20-event time window as one record and transform the dataset long-to-wide. This is followed by saving the data into a CSV file where each row is an X for easier access. 
 
