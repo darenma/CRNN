@@ -1,7 +1,12 @@
 # Contextual Sequence Modeling for Recommendation with RNN 
 – A Paper Implementation
 
-Annette Lin, Daren Ma
+## The Team
+[Annette (Zijun) Lin](https://github.com/RusLin-oir), [Daren Ma](https://github.com/darenma)
+
+Daren is mainly responsible for the data preprocessing and feature engineering part. He applied Pandas tricks to clean, filter, reshape the datasets to create the chronological variables. Daren also wrote the docs and maintained the team’s Github repository.
+
+Annette is mainly responsible for modeling and presentation. She understood the mathematics behind the original algorithm and implemented the CRNN from scratch using PyTorch. Annette conducted hyperparameter tuning in the training process. 
 
 ## Background and motivation
 The recommendation system is a vastly discussed and extremely important topic in the application of Deep Learning. Among the vast range of Deep Learning algorithms, Recurrent Neural Networks (RNN) are especially good at exhibiting temporal dynamic behavior in a dataset. In this project, we desire to use Deep Learning algorithms to solve a real-world recommendation problem on a large dataset. We selected the paper Contextual Sequence Modeling for Recommendation with Recurrent Neural Networks to implement its ideas. During this process, we gained a better understanding of both Recommendation Systems and RNN. 
@@ -59,22 +64,14 @@ Output module. This module takes the last state vector, makes it interact with t
 
 
 
-
-
 ## Model Evaluation
 We use Recall@10 as our NorthStar metric. It is the metric the authors used in the paper so we can easily compare our results. Recall@10 is the proportion of purchased items found in the top-10 recommendations. Our best result, for now, is 0.423, which means 42.3% of the users did buy one of the top-10 items we predicted the user to be interested in.
 
-## Responsibilities
-Our team has two members, Annette (Zijun) Lin[https://github.com/RusLin-oir] and Daren Ma[https://github.com/darenma].
-
-Daren is responsible for the data preprocessing and feature engineering part. He applied Pandas tricks to clean, filter, reshape the datasets to create the chronological variables. Daren also wrote the report and maintained the team’s Github repository.
-
-Annette is responsible for modeling and presentation. She understood the mathematics behind the original algorithm and implemented the CRNN from scratch using PyTorch. Annette conducted hyperparameter tuning in the training process. She also wrote the scripts for the presentation.
 
 ## References
-Original Paper: Contextual Sequence Modeling for Recommendation with Recurrent Neural Networks[https://dl.acm.org/doi/10.1145/3125486.3125488]
+Original Paper: [Contextual Sequence Modeling for Recommendation with Recurrent Neural Networks](https://dl.acm.org/doi/10.1145/3125486.3125488)
 
-Discussion of the multiplicative interaction function described in the algorithm: A Multiplicative Model for Learning Distributed Text-Based Attribute Representations[http://www.cs.toronto.edu/~zemel/documents/nips2014_kiros.pdf]
+Discussion of the multiplicative interaction function described in the algorithm: [A Multiplicative Model for Learning Distributed Text-Based Attribute Representations](http://www.cs.toronto.edu/~zemel/documents/nips2014_kiros.pdf)
 
 
 
